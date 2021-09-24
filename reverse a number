@@ -1,0 +1,52 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<math.h>
+#define max 9999
+int rev(int num)
+{
+    //find the lenght of number 
+    int sam;
+    int or_num=num;
+    int len=0;
+    while(num>0)
+    {
+    sam=num/10;
+   
+    
+    num=sam;
+    len++;
+    }
+    int sum=0;
+    int term;
+    //code to reverse the  numbeer
+    for(int i=1;i<=len;i++)
+    {
+        //mistakes always done from the code //
+        int base=pow(10,len-i);
+        term=or_num/pow(10,len-i);
+        int new_num=or_num%base;
+        or_num=new_num;
+        
+        int new_term=term*pow(10,i-1);
+        
+        sum=sum+new_term;
+    }
+    //0-3 1-2
+    return(sum);
+}
+
+
+int main()
+{
+    int num=234567;
+    printf("%d",rev(num));
+    
+    return 0;
+}
