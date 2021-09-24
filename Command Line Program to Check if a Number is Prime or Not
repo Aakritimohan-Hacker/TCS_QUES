@@ -1,0 +1,38 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#define max 9999
+char prime(int num)
+{
+    int i,j;
+    int flag;
+    for(i=2;i<num;i++)
+    {
+        flag=0;
+        if(num%i ==0)
+        {
+            return('n');
+            break;
+        }
+        
+    }
+    if(flag==0)
+    {
+        return('y');
+    }
+}
+
+
+int main()
+{
+    int num=11;
+    printf("%c",prime(num));
+    
+    return 0;
+}
