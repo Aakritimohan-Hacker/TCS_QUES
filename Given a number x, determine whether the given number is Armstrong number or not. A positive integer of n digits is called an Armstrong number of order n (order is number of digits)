@@ -1,0 +1,64 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<math.h>
+#define max 9999
+int arm(int num)
+{
+    int i;
+    int num_sam=num;
+    int powr=1;
+    int mod;
+    for(i=1;i<=max;i++)
+    {
+        mod=num/10;
+        num=mod;
+        if(mod > 0)
+        {
+            powr++;
+        }
+        else
+        break;
+    }
+    int term;
+    int sum=0;
+    int final_term;
+    int act_term;
+    // got the power from the function
+    //FUNCTION TO GET THE POWER FROM THE FUNCTION //
+    
+    //get the base from the function of the table //
+    
+    for(i=1;i<=powr;i++)
+    {
+        int base= pow(10,powr-i);
+       
+        term=num_sam/base;
+
+       
+        act_term=num_sam%base;
+        
+        num_sam=act_term;
+        final_term=pow(term,powr);
+        sum=final_term+sum;
+    }
+   return(sum);
+}
+
+
+int main()
+{
+   int num=153;
+   printf("%d",arm(num));
+   if(arm(num) != num)
+   printf("not armstrong");
+   else
+   printf("armstrong number");
+    
+}
