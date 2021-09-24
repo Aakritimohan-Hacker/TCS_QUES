@@ -1,0 +1,40 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<string.h>
+#include<math.h>
+#define max 9999
+
+char rev_str(char *p)
+{
+    int len=strlen(p);
+    printf("%d",len);
+    
+    for(int i=len-1;i>=len/2;i--)
+    {
+       char tog=p[len-1-i]; //5-5 0 //5-41
+       p[len-1-i]=p[i];//5=a //
+       p[i]=tog;
+      
+    
+    }
+   for(int i=0;i<len;i++)
+   {
+     printf("%c",p[i]);
+   }
+}
+
+int main()
+{
+    char str[10]="abcdes";
+    printf("%c",rev_str( str));
+    
+    
+    return 0;
+}
